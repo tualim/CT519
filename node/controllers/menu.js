@@ -60,7 +60,6 @@ exports.createMenu = async (req, res, next) => {
   const imageUrl = image.path;
 
   const menu = new Menu({
-    // _id: new mongoose.Types.ObjectId('5badf72403fd8b5be0366e81'),
     name: name,
     description: description,
     price: price,

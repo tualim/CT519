@@ -57,7 +57,7 @@ app.use((error, req, res, next) => {
 
 mongoose
   .connect(
-    "mongodb+srv://tualim:pFuiPSJqrh6iF06y@cluster0.e6tsqmj.mongodb.net/restuarant?retryWrites=true&w=majority"
+    "mongodb+srv://username:password@cluster0.e6tsqmj.mongodb.net/restuarant?retryWrites=true&w=majority"
   )
   .then((result) => {
     app.listen(8080);

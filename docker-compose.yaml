@@ -1,0 +1,24 @@
+version: "3.8"
+services:
+  backend:
+    build: ./node
+    ports:
+      - "8080:8080"
+    volumes:
+      - images:/app/images
+      - ./node:/app
+      - /app/node_modules
+    env_file:
+      - ./env/mongo.env
+
+  frontend:
+    build: ./front/front519
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./front/front519/src:/app/src
+    depends_on:
+      - backend
+
+volumes:
+  images:
